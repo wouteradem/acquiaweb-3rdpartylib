@@ -4,3 +4,6 @@ vendor/.git
 
 #Composer
 composer.lock
+
+#Drupal8 files
+sites/default/files/*

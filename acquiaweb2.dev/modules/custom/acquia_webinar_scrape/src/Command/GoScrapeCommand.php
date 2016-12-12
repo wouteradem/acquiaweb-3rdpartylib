@@ -23,8 +23,7 @@ class GoScrapeCommand extends Command {
     $this
       ->setName('acquia_webinar_scrape:goscrape')
       ->setDescription($this->trans('command.acquia_webinar_scrape.goscrape.description'))
-      ->addArgument('name', InputArgument::OPTIONAL, $this->trans('command.acquia_webinar_scrape.goscrape.arguments.name'))
-      ->addOption('yell', NULL, InputOption::VALUE_NONE, $this->trans('command.acquia_webinar_scrape.goscrape.options.yell'));
+      ->addOption('url', NULL, InputOption::VALUE_REQUIRED, 'https://www.acquia.com/about-us/contact');
   }
 
   /**
@@ -34,26 +33,13 @@ class GoScrapeCommand extends Command {
 
     $io = new DrupalStyle($input, $output);
 
-    $name = $input->getArgument('name');
-    if ($name) {
-      $text = 'Hello ' . $name;
-    }
-    else {
-      $text = 'Hello';
+    $url = $input->getOption('url');
+    if (!empty($url)) {
+      $io->info($url);
     }
 
-    $text = sprintf(
-      '%s, %s: %s',
-      $text,
-      'I am a new generated command for the module',
-      $this->getModule()
-    );
+    // Load Goutte library.
 
-    if ($input->getOption('yell')) {
-      $text = strtoupper($text);
-    }
-
-    $io->info($text);
   }
 
 }

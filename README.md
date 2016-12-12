@@ -7,6 +7,7 @@
 ### Init project creation
 - Create and init github repo
 -  `drupal chain --file=quick-start.yml`
+-  Create `.gitignore` file
 - Add/Commit/Push `docroot` and `quick-start.yml` to Github
 
 ### Clone the project
@@ -29,3 +30,7 @@
 - `composer require fabpot/goutte`
 - https://github.com/FriendsOfPHP/Goutte
 
+### URL to scrape data from
+- https://www.acquia.com/about-us/contact
+
+### Start coding!

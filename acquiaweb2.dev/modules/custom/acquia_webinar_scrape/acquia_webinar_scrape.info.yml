@@ -1,5 +1,0 @@
-name: acquia_webinar_scrape
-type: module
-description: Accquia Webinar scraping module using 3rd party library Goutte.
-core: 8.x
-package: Acquia

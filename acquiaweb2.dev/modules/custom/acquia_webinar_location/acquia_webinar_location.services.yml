@@ -1,0 +1,7 @@
+services:
+  acquia_webinar_location.acquia_webinar_location_default:
+    class: Drupal\acquia_webinar_location\Command\DefaultCommand
+    arguments: []
+    tags:
+      - { name: drupal.command }
+

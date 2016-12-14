@@ -1,0 +1,5 @@
+name: acquia_webinar_location
+type: module
+description: Holds content Entity for Acquia Office Location
+core: 8.x
+package: Acquia
